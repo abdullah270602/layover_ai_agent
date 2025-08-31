@@ -1,11 +1,9 @@
 # llm_client.py
 import os
 from google import genai
-from dotenv import load_dotenv
+from app.settings import settings
 
-from app import settings
 
-load_dotenv()
 
 class LLMClient:
     def __init__(self):
