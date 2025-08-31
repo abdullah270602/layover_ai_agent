@@ -6,7 +6,15 @@ from pydantic import ValidationError
 
 from app.routes.layover import router as layover_router
 
-log = logging.getLogger("uvicorn.error")
+log = logging.getLogger()
+
+ALLOWED_ORIGINS = [
+    "https://uboorly-frontend.vercel.app/",
+    "https://uboorly.com",
+    "http://localhost:3000",
+    "http://localhost:8000",
+]
+
 
 def create_app() -> FastAPI:
     app = FastAPI(
@@ -17,7 +25,7 @@ def create_app() -> FastAPI:
 
     app.add_middleware(
         CORSMiddleware,
-        allow_origins=["*"],
+        allow_origins=ALLOWED_ORIGINS,
         allow_credentials=True,
         allow_methods=["*"],
         allow_headers=["*"],
