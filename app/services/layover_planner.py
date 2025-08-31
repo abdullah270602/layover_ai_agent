@@ -205,3 +205,7 @@ TARGET JSON SCHEMA:
         # Generate and validate against the Pydantic model
         raw_model = self.llm.generate_and_validate(prompt=prompt, model_class=model_class)
         return model_class.model_validate(raw_model)
+
+
+
+planner = LayoverPlanner()
