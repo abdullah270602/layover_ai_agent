@@ -1,6 +1,6 @@
 # layover_planner.py
 from typing import Dict, Any
-from app.schemas.itinerary import ItineraryRequest
+from app.schemas.layover import ItineraryRequest
 from app.services.constants import AIRPORTS
 from app.services.maps_service import MapsService
 from app.services.llm_client import LLMClient
