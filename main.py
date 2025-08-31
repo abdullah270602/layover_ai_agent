@@ -10,6 +10,7 @@ log = logging.getLogger()
 
 ALLOWED_ORIGINS = [
     "https://uboorly-frontend.vercel.app/",
+    "https://uboorly.com/",
     "https://uboorly.com",
     "http://localhost:3000",
     "http://localhost:8000",
