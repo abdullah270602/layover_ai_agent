@@ -9,10 +9,9 @@ from app.routes.layover import router as layover_router
 log = logging.getLogger()
 
 ALLOWED_ORIGINS = [
-    "https://uboorly-frontend.vercel.app/",
-    "https://uboorly.com/",
+    "https://uboorly-frontend.vercel.app",
     "https://uboorly.com",
-    "http://localhost:3000",
+    "https://www.uboorly.com",
     "http://localhost:8000",
     "http://localhost:8080",
     "http://localhost:8081",
