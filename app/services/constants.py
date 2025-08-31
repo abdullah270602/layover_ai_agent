@@ -18,3 +18,23 @@ AIRPORTS = {
     "RAE": "Arar Domestic Airport, Arar, Saudi Arabia",
     "DWD": "Dawadmi Domestic Airport, Dawadmi, Saudi Arabia",
 }
+
+
+
+LAYOVER_PROMPT = """
+Create a concise, structured layover plan JSON for the following traveler.
+Keep 3-6 recommended_stops, realistic durations, and simple costs.
+f"Context:
+{json.dumps(context, ensure_ascii=False, indent=2)}
+Output ONLY JSON.
+"""
+
+LAYOVER_JSON_PROMPT_TMPL = """\
+You are a layover planner. Using the context below, produce a JSON layover plan that
+matches the provided JSON Schema. If data is unknown, pick sensible placeholders
+that still validate the schema. Output ONLY JSON.
+
+CONTEXT:
+{context}
+"""
+
